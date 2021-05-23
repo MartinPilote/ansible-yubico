@@ -1,0 +1,17 @@
+---
+dependencies:
+  - name: gnupg
+
+galaxy_info:
+  author: Martin Pilote
+  description: 'Ansible role to install yubico'
+  repository: 'https://github.com/MartinPilote/ansible-yubico'
+  license: 'GPL-3.0-only'
+  min_ansible_version: 2.4
+  platforms:
+  - name: 'Archlinux'
+    versions:
+    - all
+  galaxy_tags:
+    - yubico
+...

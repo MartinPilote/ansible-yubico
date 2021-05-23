@@ -1,0 +1,22 @@
+---
+- name: Yubico
+  block:
+
+    - include_vars: "{{ ansible_distribution }}.yml"
+
+    - name: Install package
+      tags: packages,workstation-packages
+      package:
+        name:
+          - "{{ gnupg }}"
+          - "{{ pcsc_lite }}"
+          - pcsc-tools
+          - ccid
+        state: latest
+
+    - name: Enable pcscd service
+      systemd:
+        name: pcscd.socket
+        state: started
+        enabled: yes
+...
